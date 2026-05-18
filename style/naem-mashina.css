@@ -1,0 +1,58 @@
+/* ===== DROPDOWN CONTAINER ===== */
+.dropdown {
+    display: inline-block;
+    position: relative;
+    z-index: 1000; /* Достатъчно високо, но не прекалено */
+}
+
+/* ===== BUTTON ===== */
+.dropdown button {
+    background-color: hsl(43, 99%, 49%);
+    color: black;
+    padding: 12px 20px;
+    border: 2px solid #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* ===== DROPDOWN MENU ===== */
+.dropdown .machine_type {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: hsl(43, 99%, 65%);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border: 1px solid #000;
+}
+
+/* SHOW MENU ON HOVER */
+.dropdown:hover .machine_type {
+    display: block;
+}
+
+/* ===== LINKS INSIDE MENU ===== */
+.dropdown a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    transition: background 0.2s;
+}
+
+.dropdown a:last-child {
+    border-bottom: none;
+}
+
+/* LINK HOVER */
+.dropdown a:hover {
+    background-color: hsl(43, 99%, 55%);
+}
+
+/* BUTTON HOVER */
+.dropdown:hover button {
+    background-color: hsl(43, 99%, 39%);
+}

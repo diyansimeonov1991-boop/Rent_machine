@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>За нас - Rent machine</title>
+
+    <link rel="icon" href="/img/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/style/za_nas.css">
+    <link rel="stylesheet" href="/style/navigation bar.css">
+    <link rel="stylesheet" href="/style/Text.css">
+    <link rel="stylesheet" href="/style/socialni mrezhi.css">
+    <link rel="stylesheet" href="/style/logo.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+</head>
+
+<body>
+
+    <h1 data-aos="fade-down">
+        Rent Machine
+        <img src="/img/logo.png" class="logo">
+    </h1>
+
+    <nav class="navbar" data-aos="fade-down" data-aos-delay="100">
+        <ul>
+            <li><a href="/html/index.html">Начална страница</a></li>
+            <li><a href="/html/nachalna stranica/naem_mashina.html">Наем на машина</a></li>
+            <li><a href="/html/nachalna stranica/za_nas.html">За нас</a></li>
+            <li><a href="/html/nachalna stranica/politika za poveritelnost.html">Политика за поверителност</a></li>
+            <li><a href="/html/nachalna stranica/Kontakti.html">Контакти</a></li>
+        </ul>
+    </nav>
+
+    <main class="text-box" data-aos="fade-up">
+
+        <section class="about-section">
+            <h1>Информация за нас</h1>
+
+            <div class="btn-container">
+                <button onclick="showContent('business')">С какво се занимаваме</button>
+                <button onclick="showContent('history')">История на фирмата</button>
+                <button onclick="showContent('mission')">Нашата мисия</button>
+            </div>
+        </section>
+
+        <section id="business" class="info-content active-content">
+            <h3>С какво се занимаваме</h3>
+            <p>
+                Ние предлагаме широка гама от професионални машини под наем – от строителна техника до специализирани инструменти.
+                Целта ни е да осигурим надеждно оборудване за вашите проекти.
+            </p>
+        </section>
+
+        <section id="history" class="info-content">
+            <h3>История на фирмата</h3>
+            <p>
+                Започнахме като малък семеен бизнес с няколко машини.
+                Днес разполагаме с голям автопарк и много доволни клиенти.
+            </p>
+        </section>
+
+        <section id="mission" class="info-content">
+            <h3>Нашата мисия</h3>
+            <p>
+                Да бъдем най-надеждният партньор за наем на техника,
+                като предлагаме качество, коректност и добри цени.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="/img/logo.png" alt="Logo">
+                <h2>Rent Machine</h2>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/"><img src="/socilani mrezhi icons/facebook.png"></a>
+                <a href="https://www.instagram.com/?hl=bg"><img src="/socilani mrezhi icons/instagram.png"></a>
+                <a href="https://www.youtube.com/"><img src="/socilani mrezhi icons/youtube.png"></a>
+                <a href="https://web.telegram.org/"><img src="/socilani mrezhi icons/telegram.png"></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Rent Machine. Всички права запазени.</p>
+        </div>
+
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        function showContent(id) {
+            document.querySelectorAll('.info-content')
+                .forEach(el => el.classList.remove('active-content'));
+
+            document.getElementById(id).classList.add('active-content');
+        }
+    </script>
+
+</body>
+</html>

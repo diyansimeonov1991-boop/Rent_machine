@@ -1,0 +1,112 @@
+/* 1. Първо добавяме това, за да кажем на страницата да заема целия екран */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 2. Твоят съществуващ код за футера с една важна добавка */
+.site-footer {
+    background: #1c1c1c;
+    color: #fff;
+    padding: 40px 20px 10px;
+    
+    /* ДОБАВИ ТОВА: */
+    margin-top: auto; 
+    width: 100%;
+}
+
+/* --- Останалото от твоя код си остава същото --- */
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+    flex-wrap: nowrap;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-brand img {
+    width: 50px;
+}
+
+.footer-brand h2 {
+    font-size: 24px;
+    color: hsl(43, 99%, 55%);
+    margin: 0;
+}
+
+.footer-top .footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-top .footer-socials img {
+    width: 30px;
+    transition: 0.3s;
+}
+
+.footer-top .footer-socials img:hover {
+    transform: scale(1.6);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-column h3,
+.footer-column h4 {
+    margin-bottom: 15px;
+    color: hsl(43, 99%, 55%);
+}
+
+.footer-column p,
+.footer-column li {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #4CAF50;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .footer-top {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+}
