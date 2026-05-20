@@ -7,7 +7,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  background-image: url(/img/construction.jpg);
+  background-image: url(construction.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
